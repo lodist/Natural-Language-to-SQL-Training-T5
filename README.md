@@ -22,18 +22,22 @@ Queries ranging from simple conditions to complex logic involving multiple param
 With as few as 2,000 examples, the fine-tuned model started delivering reliable results for generating SQL-like WHERE conditions. However, the more complex the SQL structure, the larger the training dataset and examples required.
 
 ## Dataset
-Sample Dataset (Sample_Training_Data.csv)
+
+### Sample Dataset (`Sample_Training_Data.csv`)
+
 The sample dataset provided in this repository demonstrates the structure of the input-output pairs used for training. Each row contains:
 
-- Input: A natural language command (e.g., "Einschluss: Ist Mitglied").
-- Value: The corresponding SQL condition (e.g., "IsMember = true").
+- **Input**: A natural language command (e.g., `"Einschluss: Ist Mitglied"`).
+- **Value**: The corresponding SQL condition (e.g., `"IsMember = true"`).
 
 Sample rows:
-Input	                                        Value
-Einschluss: Ist Mitglied	                    IsMember = true
-Ausschluss: Kampagne 23987	                  listCampaigns in ('23987')
-Einschluss: Wohnhaft im Kanton ZH oder WT	    addressForCampaign_canton in ('ZH','WT')
-Einschluss: Alter 26-75	                      (DATEDIFF(CURDATE(), birthdate) / 365.25) BETWEEN 26 AND 75
+
+| **Input**                                      | **Value**                                                              |
+|-----------------------------------------------|------------------------------------------------------------------------|
+| Einschluss: Ist Mitglied                      | IsMember = true                                                       |
+| Ausschluss: Kampagne 23987                    | listCampaigns in ('23987')                                            |
+| Einschluss: Wohnhaft im Kanton ZH oder WT     | addressForCampaign_canton in ('ZH','WT')                              |
+| Einschluss: Alter 26-75                       | (DATEDIFF(CURDATE(), birthdate) / 365.25) BETWEEN 26 AND 75           |
 
 This dataset focuses on training the model to generate SQL conditions for filtering and segmenting data.
 
