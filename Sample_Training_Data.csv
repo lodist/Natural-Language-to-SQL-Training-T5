@@ -1,0 +1,15 @@
+Input;Value
+Einschluss: Ist Mitglied;IsMember = true
+Einschluss: Ist kein Mitglied;IsMember = false
+Einschluss: Alter 26-75;(DATEDIFF(CURDATE(), birthdate) / 365.25) BETWEEN 26 AND 75
+Einschluss: ungekündigte TCS Mitgliedschaftsdeckung;IsMember = true and listProducts_holder_coverage in ('101') and listProducts_benificiary_cancellationRequest not in ('101')
+Einschluss: ungültig (Kind);lovSubSegment in ('6')
+Ausschluss: Offene Mitgliedschaftsrechnung;listProducts_benificiary_unpaid not in ('101')
+Einschluss: Noch keine VRS-Kampagne erhalten;listProducts_offerActivity in ('107')
+Einschluss: Wohnhaft im Kanton ZH oder WT;addressForCampaign_canton in ('ZH','WT')
+Einschluss: Wohnhaft im Kanton AR, AI oder BE;addressForCampaign_canton in ('AR','AI','BE')
+Ausschluss: IT oder FR sprachig;lovLanguage in('I','F')
+Einschluss: Wohneigentumsverhältnis = Eigentum;AZ_reportsOfProperty in ('2') 
+Einschluss: Kampagne 14597;listCampaigns in ('14597')
+Ausschluss: Kampagne 23987;listCampaigns in ('23987')
+Einschluss: MutationsCode 6;AZ_mutationCode in ('6')
