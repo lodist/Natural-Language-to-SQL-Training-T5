@@ -99,15 +99,3 @@ Hugging Face Transformers for providing the pre-trained T5 model.
 The machine learning community for advancing research in NLP and SQL generation.
 
 Let me know if you need further adjustments or additional details! 
-
-
-
-
-
-
-
-
-
-
-
-Cha
