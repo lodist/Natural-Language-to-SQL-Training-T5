@@ -91,6 +91,23 @@ This project focuses on generating WHERE clauses for SQL queries.
 Expanding the project to cover complete SQL queries, including SELECT, JOIN, and GROUP BY, would require significantly larger datasets and additional training.
 The complexity of the SQL conditions is directly proportional to the number of training examples required.
 
+## Results
+
+### Evaluation Metrics:
+- **Exact Match (EM):** 89.04%
+- **Average BLEU Score:** 58.57%
+- **ROUGE Scores:**
+  - **ROUGE-1:** 0.9636
+  - **ROUGE-2:** 0.9476
+  - **ROUGE-L:** 0.9635
+- **Perplexity:** 1.1105
+
+### Summary:
+The model demonstrates strong performance across all metrics, with ROUGE scores and Perplexity being production-ready. 
+Improvements in Exact Match (EM) and BLEU Score are minimal, and the model is on the verge of meeting production-grade standards. 
+A final fine-tuning or dataset refinement could push these metrics to fully meet production requirements.
+
+
 ## License
 This repository is licensed under the MIT License. See LICENSE for details.
 
