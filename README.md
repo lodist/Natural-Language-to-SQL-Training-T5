@@ -93,6 +93,8 @@ The complexity of the SQL conditions is directly proportional to the number of t
 
 ## Results
 
+Use the Test_T5.ipynb script to evaluate your model and get the following metrics.
+
 ### Evaluation Metrics:
 - **Exact Match (EM):** 89.04%
 - **Average BLEU Score:** 58.57%
@@ -101,6 +103,7 @@ The complexity of the SQL conditions is directly proportional to the number of t
   - **ROUGE-2:** 0.9476
   - **ROUGE-L:** 0.9635
 - **Perplexity:** 1.1105
+
 
 ### Summary:
 The model demonstrates strong performance across all metrics, with ROUGE scores and Perplexity being production-ready. 
